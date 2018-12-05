@@ -1,7 +1,7 @@
 print('у нас есть квадратное уравнение a*x**2+b*x+c=0')
-a=int(input('a= '))
-b=int(input('b= '))
-c=int(input('c= '))
+a=float(input('a= '))
+b=float(input('b= '))
+c=float(input('c= '))
 discr=b**2 - 4*a*c
 if discr>0:
     print('2 вещественных корня')
