@@ -1,6 +1,7 @@
 from string import whitespace, punctuation
 n=0
 a=[]
+b=[]
 while n!='':
     n=input('vvedite stroku  :')
     d=n.upper()
@@ -9,7 +10,9 @@ while n!='':
     for q in punctuation:
         d=d.replace(q,' ')
     m=d.split()
-    for i in m:
-        a.append(i)
-for v in set(a):
-    print(v)
+    for k in set(m):
+        a=m.count(k)
+        b.append((k,a))
+for s in b:
+    print(s)
+
