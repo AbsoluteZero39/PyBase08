@@ -1,18 +1,20 @@
 from string import whitespace, punctuation
-n=0
+d=0
+st=''
 a=[]
 b=[]
-while n!='':
-    n=input('vvedite stroku  :')
-    d=n.upper()
+while d!='':
+    d=input('vvedite stroku  :').lower()
+    st=st+" "+d
     for i in whitespace:
-        d=d.replace(i,' ')
+        st=st.replace(i,' ')
     for q in punctuation:
-        d=d.replace(q,' ')
-    m=d.split()
-    for k in set(m):
-        a=m.count(k)
-        b.append((k,a))
-for s in b:
-    print(s)
+        st=st.replace(q,' ')
+    m=st.split()
+for k in set(m):
+    a=m.count(k)
+    b.append({k:a})
+for jj in b:
+    print(jj)
+
 
