@@ -1,13 +1,15 @@
+import string
 def clear_word(word, filterstr):
     for i in filterstr:
-        word=word.replace(i,' ')
+        word=word.replace(i,'')
     result=word
     return result
 try:
     a=input('введите ваше слово')
     b=input('введите не нужный символ')
+    u=string.ascii_letters + string.digits + string.punctuation + string.whitespace
     for i in a:
-        if ord(i)>=65 and ord(i)<=122:
+        if i in u:
             k=True
         else:
             m=a.index(i)
@@ -16,4 +18,6 @@ try:
     print(x)
 except ValueError:
     print(i,'- наш символ',m,'- индекс нашего неверного символа')
+    x=clear_word(a,b)
     print(x)
+    
